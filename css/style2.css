@@ -1,0 +1,120 @@
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.txth1{
+    color: brown;
+}
+.logo{
+    width: 60px;
+}
+body {
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.container_texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; 
+    color: white;
+}
+
+.container_texto h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.container_texto h3 {
+    font-size: 2rem;
+}
+
+.container_texto p {
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100vh; 
+    object-fit: cover; 
+}
+
+/* Centrar la imagen de fondo con borde celeste */
+.imagen_fondo {
+    display: block;
+    margin: 0 auto;
+    border: 5px solid #00BFFF; /* Color celeste */
+    width: 80%; /* Ajusta el ancho según lo que prefieras */
+    max-width: 1200px; /* Limita el tamaño máximo */
+    height: auto;
+}
+
+/* Estilos generales para la cuadrícula */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 imágenes por fila */
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-item {
+    position: relative;
+    overflow: visible;
+    border: 2px solid #ddd; /* Borde de las imágenes */
+    border-radius: 10px;
+    background-color: #b3e0ff; /* Fondo celeste */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #000; /* Cambiar color del texto a negro */
+}
+
+.image-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.image-item:hover {
+    transform: translateY(-10px); /* Desplazamiento hacia arriba al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+}
+
+.card-body {
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+    color: #000; /* Color del texto negro */
+}
+
+.card-body .btn {
+    margin-top: 10px;
+}
+
+/* Estilos adicionales para asegurar que las celdas estén alineadas */
+.image-item .card-body {
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* 1 imagen por fila en pantallas más pequeñas */
+    }
+}
